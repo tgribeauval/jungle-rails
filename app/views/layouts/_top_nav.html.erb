@@ -24,6 +24,9 @@
               <li><%= link_to category.name, category %></li>
             <% end %>
           </ul>
+          <li>
+
+          </li>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -43,6 +46,13 @@
           <%= link_to cart_path do %>
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
+        </li>
+        <li id="login-logout">
+          <% if current_user %>
+           Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
+         <% else %>
+           <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+         <% end %>
         </li>
       </ul>
     </div>

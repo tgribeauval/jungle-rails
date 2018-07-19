@@ -24,5 +24,4 @@ class Admin::CategoriesController < ApplicationController
       :name,
     )
   end
-
   end
